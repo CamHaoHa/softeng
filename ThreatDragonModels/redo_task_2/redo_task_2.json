@@ -1180,6 +1180,56 @@
             "vertices": []
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "riddle_answer",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "riddle_answer"
+            ],
+            "id": "c502ac13-4ad1-451c-aeef-7766f9fbd9cc",
+            "source": {
+              "x": 485,
+              "y": 170
+            },
+            "target": {
+              "x": 690,
+              "y": 250
+            },
+            "vertices": [
+              {
+                "x": 640,
+                "y": 190
+              }
+            ]
+          },
+          {
             "position": {
               "x": 690,
               "y": -15
