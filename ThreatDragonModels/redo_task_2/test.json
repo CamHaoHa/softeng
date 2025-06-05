@@ -1,0 +1,140 @@
+{
+  "version": "2.4.1",
+  "summary": {
+    "title": "System Level DFD",
+    "owner": "",
+    "description": "Threat Dragon import from Mermaid - system overview",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 1,
+        "title": "System Level DFD",
+        "diagramType": "DFD",
+        "placeholder": "",
+        "thumbnail": "",
+        "version": "2.4.1",
+        "cells": [
+          {
+            "shape": "actor",
+            "id": "browser",
+            "position": { "x": 80, "y": 200 },
+            "size": { "width": 120, "height": 60 },
+            "attrs": {
+              "text": { "text": "Web Browser" },
+              "body": { "stroke": "#333333", "strokeWidth": 1 }
+            },
+            "data": { "name": "Web Browser", "type": "tm.Actor" }
+          },
+          {
+            "shape": "process",
+            "id": "auth",
+            "position": { "x": 310, "y": 50 },
+            "size": { "width": 160, "height": 60 },
+            "attrs": {
+              "text": { "text": "Authentication Handler" }
+            },
+            "data": { "name": "Authentication Handler", "type": "tm.Process" }
+          },
+          {
+            "shape": "process",
+            "id": "menu",
+            "position": { "x": 310, "y": 200 },
+            "size": { "width": 160, "height": 60 },
+            "attrs": {
+              "text": { "text": "Menu/Navigation Handler" }
+            },
+            "data": { "name": "Menu/Navigation Handler", "type": "tm.Process" }
+          },
+          {
+            "shape": "process",
+            "id": "game",
+            "position": { "x": 560, "y": 200 },
+            "size": { "width": 140, "height": 60 },
+            "attrs": {
+              "text": { "text": "Game Engine" }
+            },
+            "data": { "name": "Game Engine", "type": "tm.Process" }
+          },
+          {
+            "shape": "process",
+            "id": "userscore",
+            "position": { "x": 560, "y": 340 },
+            "size": { "width": 150, "height": 60 },
+            "attrs": {
+              "text": { "text": "User Score Handler" }
+            },
+            "data": { "name": "User Score Handler", "type": "tm.Process" }
+          },
+          {
+            "shape": "process",
+            "id": "scoreboard",
+            "position": { "x": 840, "y": 250 },
+            "size": { "width": 160, "height": 60 },
+            "attrs": {
+              "text": { "text": "Scoreboard Handler" }
+            },
+            "data": { "name": "Scoreboard Handler", "type": "tm.Process" }
+          },
+          {
+            "shape": "process",
+            "id": "admin",
+            "position": { "x": 840, "y": 50 },
+            "size": { "width": 130, "height": 60 },
+            "attrs": {
+              "text": { "text": "Admin Handler" }
+            },
+            "data": { "name": "Admin Handler", "type": "tm.Process" }
+          },
+          {
+            "shape": "store",
+            "id": "userdb",
+            "position": { "x": 310, "y": -100 },
+            "size": { "width": 120, "height": 60 },
+            "attrs": {
+              "text": { "text": "User Account DB\n(username, password hash)" }
+            },
+            "data": { "name": "User Account DB", "type": "tm.Store" }
+          },
+          {
+            "shape": "store",
+            "id": "scorefile",
+            "position": { "x": 720, "y": 340 },
+            "size": { "width": 120, "height": 60 },
+            "attrs": {
+              "text": { "text": "User Score Storage\n(flat file, score_id)" }
+            },
+            "data": { "name": "User Score Storage", "type": "tm.Store" }
+          },
+          {
+            "shape": "store",
+            "id": "boardfile",
+            "position": { "x": 1020, "y": 220 },
+            "size": { "width": 120, "height": 60 },
+            "attrs": {
+              "text": { "text": "Scoreboard Storage" }
+            },
+            "data": { "name": "Scoreboard Storage", "type": "tm.Store" }
+          },
+
+          // DATA FLOWS
+
+          { "shape": "flow", "id": "browser-auth", "source": { "cell": "browser" }, "target": { "cell": "auth" }, "zIndex": 10, "labels": ["login form data (username, password)"] },
+          { "shape": "flow", "id": "auth-userdb", "source": { "cell": "auth" }, "target": { "cell": "userdb" }, "zIndex": 10, "labels": ["authentication query (username, password)"] },
+          { "shape": "flow", "id": "userdb-auth", "source": { "cell": "userdb" }, "target": { "cell": "auth" }, "zIndex": 10, "labels": ["user record (valid/invalid, password hash)"] },
+          { "shape": "flow", "id": "auth-browser", "source": { "cell": "auth" }, "target": { "cell": "browser" }, "zIndex": 10, "labels": ["session token / login outcome"] },
+
+          { "shape": "flow", "id": "browser-menu", "source": { "cell": "browser" }, "target": { "cell": "menu" }, "zIndex": 10, "labels": ["menu navigation events (button, session)"] },
+          { "shape": "flow", "id": "menu-game", "source": { "cell": "menu" }, "target": { "cell": "game" }, "zIndex": 10, "labels": ["session data (user id)"] },
+          { "shape": "flow", "id": "menu-userscore", "source": { "cell": "menu" }, "target": { "cell": "userscore" }, "zIndex": 10, "labels": ["session data (user id)"] },
+
+          { "shape": "flow", "id": "browser-game", "source": { "cell": "browser" }, "target": { "cell": "game" }, "zIndex": 10, "labels": ["game answer, riddle index, session info"] },
+          { "shape": "flow", "id": "game-scorefile", "source": { "cell": "game" }, "target": { "cell": "scorefile" }, "zIndex": 10, "labels": ["score update data, attempt info"] },
+          { "shape": "flow", "id": "scorefile-userscore", "source": { "cell": "scorefile" }, "target": { "cell": "userscore" }, "zIndex": 10, "labels": ["user score/attempt data"] },
+
+          { "shape": "flow", "id": "userscore-scorefile", "source": { "cell": "userscore" }, "target": { "cell": "scorefile" }, "zIndex": 10, "labels": ["generate share request (score id, session)"] },
+          { "shape": "flow", "id": "userscore-browser", "source": { "cell": "userscore" }, "target": { "cell": "browser" }, "zIndex": 10, "labels": ["shareable link/token"] },
+          { "shape": "flow", "id": "browser-userscore", "source": { "cell": "browser" }, "target": { "cell": "userscore" }, "zIndex": 10, "labels": ["visit shared score page (score id)"] },
+          { "shape": "flow", "id": "scorefile-userscore2", "source": { "cell": "scorefile" }, "target": { "cell": "userscore" }, "zIndex": 10, "
