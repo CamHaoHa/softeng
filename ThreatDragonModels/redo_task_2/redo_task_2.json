@@ -38,6 +38,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "37c6dee4-6435-4ad5-86d1-7bd3638bc747",
-            "zIndex": 1,
             "data": {
               "type": "tm.Process",
               "name": "Web\n Browser",
@@ -157,6 +157,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -240,7 +241,6 @@
               ]
             },
             "id": "44f32ee7-b6c9-49bf-afa4-cd10006f8715",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Player",
@@ -337,50 +337,6 @@
             },
             "target": {
               "cell": "be4f130c-f211-4b68-9006-a8dc88ac1f98",
-              "port": "942d17e1-e379-44b0-8f21-e9f7b81026ea"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "riddle answers, \nriddle index",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "riddle answers, \nriddle index"
-            ],
-            "id": "2d58a431-0efd-47ae-a957-e02def9832d1",
-            "source": {
-              "x": 480,
-              "y": 160
-            },
-            "target": {
-              "cell": "25aed0cf-60ec-4136-882f-86362c835504",
               "port": "942d17e1-e379-44b0-8f21-e9f7b81026ea"
             }
           },
@@ -1197,6 +1153,33 @@
             ]
           },
           {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "jinja2 auto-escape",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "jinja2 auto-escape"
+            ],
+            "id": "7fea5c95-bf3a-40e5-b45a-ce7881908bd4",
+            "source": {
+              "x": 580,
+              "y": -100
+            },
+            "target": {
+              "x": 460,
+              "y": 580
+            },
+            "vertices": []
+          },
+          {
             "position": {
               "x": 690,
               "y": -15
@@ -1217,6 +1200,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1300,7 +1284,6 @@
               ]
             },
             "id": "be4f130c-f211-4b68-9006-a8dc88ac1f98",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": "login \nuser(username)",
@@ -1336,6 +1319,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1419,7 +1403,6 @@
               ]
             },
             "id": "25aed0cf-60ec-4136-882f-86362c835504",
-            "zIndex": 12,
             "data": {
               "type": "tm.Process",
               "name": "Game Logic\n\ngame(username), \ngameover(username)\ncongrats (username)",
@@ -1455,6 +1438,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -1538,7 +1522,6 @@
               ]
             },
             "id": "6dc212c0-1c32-436e-a819-c0b4ae54699e",
-            "zIndex": 13,
             "data": {
               "type": "tm.Process",
               "name": "riddle_loader\nriddle(),\n riddle_answer()",
@@ -1577,6 +1560,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -1660,7 +1644,6 @@
               ]
             },
             "id": "79d0de8e-4dd8-43fa-a5df-827e7a8f97a4",
-            "zIndex": 14,
             "data": {
               "type": "tm.Store",
               "name": "data/-riddles.txt",
@@ -1700,6 +1683,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -1783,7 +1767,6 @@
               ]
             },
             "id": "6d9cd943-9b0b-4f4f-be73-4ba4b8b49fe6",
-            "zIndex": 15,
             "data": {
               "type": "tm.Store",
               "name": "data/-answers.txt",
@@ -1820,6 +1803,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 16,
             "ports": {
               "groups": {
                 "top": {
@@ -1903,7 +1887,6 @@
               ]
             },
             "id": "f2a6c1a4-553d-46d5-9b7a-23c03c7e2079",
-            "zIndex": 16,
             "data": {
               "type": "tm.Process",
               "name": "attempts \n(clear_guesses(), \nstore_all_attempts(), \nattempts_remaning(), \nnum_of_attempts()",
@@ -1942,6 +1925,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 17,
             "ports": {
               "groups": {
                 "top": {
@@ -2025,7 +2009,6 @@
               ]
             },
             "id": "87105fc6-dda9-4720-a289-20d8b3f867ac",
-            "zIndex": 17,
             "data": {
               "type": "tm.Store",
               "name": "data/user-guesses.txt\n",
@@ -2062,6 +2045,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 18,
             "ports": {
               "groups": {
                 "top": {
@@ -2145,7 +2129,6 @@
               ]
             },
             "id": "8a629cc7-ff1d-47a9-9c2b-3134c4a8daa2",
-            "zIndex": 18,
             "data": {
               "type": "tm.Process",
               "name": "Score_File_Handler\nwrite_to_file()\nclear_score()\nadd_to_score\nend_score()\nfinal_score()\n",
@@ -2184,6 +2167,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 19,
             "ports": {
               "groups": {
                 "top": {
@@ -2267,7 +2251,6 @@
               ]
             },
             "id": "85ad120f-19ff-45f4-a2d1-a6610d17bbe5",
-            "zIndex": 19,
             "data": {
               "type": "tm.Store",
               "name": "data/user-score.txt",
@@ -2304,6 +2287,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 20,
             "ports": {
               "groups": {
                 "top": {
@@ -2387,7 +2371,6 @@
               ]
             },
             "id": "4ea6a59c-cbf9-403e-9179-a78a00ff6f8b",
-            "zIndex": 20,
             "data": {
               "type": "tm.Process",
               "name": "highscore(), ",
@@ -2426,6 +2409,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 21,
             "ports": {
               "groups": {
                 "top": {
@@ -2509,7 +2493,6 @@
               ]
             },
             "id": "f76adda0-348c-4851-8c90-575e593d5555",
-            "zIndex": 21,
             "data": {
               "type": "tm.Store",
               "name": "data/-highscores.txt",
