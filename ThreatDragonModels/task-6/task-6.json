@@ -38,6 +38,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "328f0a17-9159-4b65-b94c-ef87118b1f28",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Web Browser",
@@ -154,6 +154,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -237,7 +238,6 @@
               ]
             },
             "id": "ef58bbe5-bebe-4b9e-8dc3-2ec59d033542",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Authentication",
@@ -643,6 +643,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -726,7 +727,6 @@
               ]
             },
             "id": "54f93f77-54e0-41c9-aa40-22dcb0c1a39d",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": "route handler\nmenu/navigation",
@@ -765,6 +765,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -848,7 +849,6 @@
               ]
             },
             "id": "c9cf6f47-db8f-492e-9bcb-aa913cb40ac8",
-            "zIndex": 12,
             "data": {
               "type": "tm.Store",
               "name": "User DB\n(SQLite)",
@@ -885,6 +885,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -968,7 +969,6 @@
               ]
             },
             "id": "da962482-fc5b-4aea-867d-2f89c99581e2",
-            "zIndex": 13,
             "data": {
               "type": "tm.Process",
               "name": "Game start/\ncontinue",
@@ -1004,6 +1004,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -1087,7 +1088,6 @@
               ]
             },
             "id": "46e5205c-e893-4e23-b852-01b1610d6b87",
-            "zIndex": 14,
             "data": {
               "type": "tm.Process",
               "name": "Answer validator/\n",
@@ -1123,6 +1123,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -1206,7 +1207,6 @@
               ]
             },
             "id": "6eb48a07-a9ea-4e11-9c06-b335e676c597",
-            "zIndex": 15,
             "data": {
               "type": "tm.Process",
               "name": "Riddle Loader \nriddle()",
