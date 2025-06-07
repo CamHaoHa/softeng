@@ -406,67 +406,9 @@
               {
                 "x": 1510,
                 "y": 510
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "session['riddle_index'] = 0\nusername",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "session['riddle_index'] = 0\nusername"
-            ],
-            "id": "78ad0393-e5f5-48d8-9b52-3884b75d333c",
-            "source": {
-              "x": 1836,
-              "y": 910
-            },
-            "target": {
-              "cell": "f702fb7d-6d5b-4e17-9509-73cc402a1f29",
-              "port": "66cd8d80-c060-4903-9961-f6179c5d1c5f"
-            },
-            "vertices": [
-              {
-                "x": 1950,
-                "y": 750
               },
               {
-                "x": 1980,
-                "y": 620
-              },
-              {
-                "x": 2050,
-                "y": 570
-              },
-              {
-                "x": 2020,
+                "x": 1620,
                 "y": 510
               }
             ]
@@ -650,9 +592,85 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "username, \nsession['riddle_index'] = 0",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "username, \nsession['riddle_index'] = 0"
+            ],
+            "id": "3cf76c1f-1d8a-44f4-a72d-f52e2f2907e8",
+            "source": {
+              "x": 1406,
+              "y": 844
+            },
+            "target": {
+              "cell": "f702fb7d-6d5b-4e17-9509-73cc402a1f29",
+              "port": "af5407a3-29c8-455a-98dd-f7141529047a"
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              ""
+            ],
+            "id": "585e21d8-ea15-40be-a7b5-7112424a84d1",
+            "source": {
+              "x": 1540,
+              "y": 450
+            },
+            "target": {
+              "cell": "c9807a31-89e8-45e3-8e9e-bada9862f702",
+              "port": "35b9ea97-ac10-4c03-b15f-0be35e48f7bc"
+            },
+            "vertices": [
+              {
+                "x": 1580,
+                "y": 580
+              }
+            ]
+          },
+          {
             "position": {
-              "x": 1600,
-              "y": 380
+              "x": 1660,
+              "y": 530
             },
             "size": {
               "width": 120,
@@ -770,13 +788,6 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
